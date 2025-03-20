@@ -100,14 +100,10 @@
       const airportRenderer = {
         type: "simple",
         symbol: {
-          type: "simple-marker",
-          style: "circle", // You can change this to "square", "diamond", "cross", etc.
-          color: "blue", // Fill color
-          size: "8px", // Size of the marker
-          outline: {
-            color: "white", // Outline color
-            width: 1 // Outline width
-          }
+          type: "picture-marker",
+          url: "https://sounny.github.io/agol/outline_local_airport_black_24dp.png",
+          width: "18px",
+          height: "18px"
         }
       };
 
@@ -145,12 +141,16 @@
       const myAirportsRenderer = {
         type: "simple",
         symbol: {
-          type: "picture-marker",
-          url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAACAKADAAQAAAABAAACAAAAAAAL+LWFAABAAElEQVR4Ae2dB9gdVbX+vxCSkEASaugQQhfpIE0lIIIUBekg/gEbKooICOiFC1dEFOGiKCoiXRABC116ERCQ3nsKPXQCAULg/t83+U7Oycmpc/bstWb2u55nfWe+OTN7rfXba+/ZZ8qeAX0SERCBIhIYAqeXgI6ADq/57HYZu/ZNhr7V/1m/3O5/7vcc9F2oRAREoEAEBhTIV7kqAikSGIWgV+rXFWuWR2N5DqgH+T84MQH6GPTRfq0sv4D/JSIgAg4JaADgsFLkUnIEBiHiZaGNDvTzFpwGzxBwMFAZEHCAwOUnoO...", // Custom icon
-          width: "18px",
-          height: "18px"
+          type: "simple-marker",
+          style: "circle", // You can change this to "square", "diamond", "cross", etc.
+          color: "blue", // Fill color
+          size: "8px", // Size of the marker
+          outline: {
+            color: "white", // Outline color
+            width: 1 // Outline width
         }
-      };
+      }
+     };
 
       // Adding the feature layer with the renderer
       const myAirports = new FeatureLayer({
